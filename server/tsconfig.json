@@ -3,8 +3,8 @@
   "compilerOptions": {
 
 
-    // "target": "es2020",                  /* Versión de JavaScript de salida */
-    // "module": "commonjs",                /* Módulo de salida para Node */
+    "target": "es2020",                  /* Versión de JavaScript de salida */
+    "module": "commonjs",                /* Módulo de salida para Node */
     "outDir": "./dist",                  /* Carpeta de destino del JS compilado */
     "rootDir": "./src",                  /* Carpeta donde están los archivos .ts */
     "esModuleInterop": true,             /* Importaciones modernas */
@@ -15,8 +15,8 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
+    // "module": "nodenext",
+    // "target": "esnext",
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],

@@ -1,23 +1,26 @@
-// server/jest.config.cjs (usando module.exports)
+// server/jest.config.cjs
 const config = {
-  // Ya NO usamos 'preset: "ts-jest"' aquí
   testEnvironment: 'node',
   testMatch: ['**/__tests__/**/*.ts', '**/?(*.)+(spec|test).ts'],
   
-  // SOLUCIÓN: Usar la clave 'transform' según la recomendación de ts-jest.
-  // Esto le dice a Jest cómo transformar archivos .ts, resolviendo el error 'Unexpected token export'.
+  // CRUCIAL: Configuración de la transformación explícita y moderna
   transform: {
-    // Aplica el transformador 'ts-jest' a todos los archivos .ts y .tsx
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      // Configuraciones de ts-jest (opcional pero recomendado)
-      tsconfig: './tsconfig.json',
-      // Forzar un módulo consistente para las pruebas si tsconfig usa ESM
-      module: 'commonjs', 
-    }],
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest', 
+      {
+        // Ruta al archivo de configuración de TypeScript
+        tsconfig: './tsconfig.json', 
+        // ¡Forzar el módulo CommonJS para el entorno de prueba!
+        module: 'commonjs', 
+      },
+    ],
   },
+  
+  // Si tienes la clave 'preset' o 'globals', bórrala. 
+  // Usa solo la clave 'transform' con la configuración de ts-jest.
 
-  // Asegúrate de que no haya clave 'globals' con configuración de ts-jest antigua.
-  // ... otras opciones como rootDir ...
+  rootDir: './',
+  modulePaths: ['<rootDir>'],
 };
 
 module.exports = config;

@@ -4,7 +4,7 @@
 
 
     "target": "es2020",                  /* Versión de JavaScript de salida */
-    "module": "commonjs",                /* Módulo de salida para Node */
+    // "module": "commonjs",                /* Módulo de salida para Node */
     "outDir": "./dist",                  /* Carpeta de destino del JS compilado */
     "rootDir": "./src",                  /* Carpeta donde están los archivos .ts */
     "esModuleInterop": true,             /* Importaciones modernas */

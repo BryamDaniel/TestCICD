@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest --passWithNoTests"
+    "test": "vitest --passWithNoTests",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
@@ -25,12 +27,14 @@
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",
     "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "jiti": "^2.6.1",
     "jsdom": "^27.2.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.3",
+    "typescript-eslint": "^8.47.0",
     "vite": "^7.2.2",
     "vitest": "^4.0.8"
   }

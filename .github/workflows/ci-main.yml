@@ -39,6 +39,15 @@ jobs:
       - name: Server - Instalar Dependencias
         run: npm install
         working-directory: ./server # ¡Cambio aquí!
+
+
+      - name: Lint Code
+        run: npm run lint
+        working-directory: ./server # ¡Cambio aquí!
+
+      - name: Type Check
+        run: npm run tsc -- --noEmit
+        working-directory: ./server # ¡Cambio aquí!
         
       # 4. Server: Construir (Compilar TypeScript)
       - name: Server - Construir (npm run build)

@@ -1,0 +1,1 @@
+[![Integracion Continua (CI)](https://github.com/BryamDaniel/TestCICD/actions/workflows/ci-main.yml/badge.svg)](https://github.com/BryamDaniel/TestCICD/actions/workflows/ci-main.yml)

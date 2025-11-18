@@ -8,7 +8,8 @@
     "build": "tsc",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint src/**/*.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",

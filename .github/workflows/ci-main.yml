@@ -65,6 +65,14 @@ jobs:
       - name: Client - Instalar Dependencias
         run: npm install
         working-directory: ./client # ¡Cambio aquí!
+
+      - name: Lint Code
+        run: npm run lint
+        working-directory: ./client # ¡Cambio aquí!
+
+      - name: Type Check
+        run: npm run tsc -- --noEmit
+        working-directory: ./client # ¡Cambio aquí!
         
       # 7. Client: Construir (Generar la versión de producción con Vite)
       - name: Client - Construir (npm run build)
